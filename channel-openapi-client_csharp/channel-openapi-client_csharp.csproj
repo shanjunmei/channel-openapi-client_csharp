@@ -97,7 +97,7 @@
     <Compile Include="hz.net\com\hzins\channel\api\model\resp\SettlementBillTotalResp.cs" />
     <Compile Include="hz.net\com\hzins\channel\api\model\resp\SettlementDetailResp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="rpc.client\Configure.cs" />
+    <Compile Include="rpc.client\SdkConfigure.cs" />
     <Compile Include="rpc.client\core\Command.cs" />
     <Compile Include="rpc.client\core\Proxy.cs" />
     <Compile Include="rpc.client\core\ProxyFactory.cs" />

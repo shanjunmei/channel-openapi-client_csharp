@@ -62,14 +62,14 @@ namespace com.hzins.rpc.client.core
 
         public string remoteInvoke(string api, object obj) {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(api);
-            request.ContentType = Configure.Request.contentType;
+            request.ContentType = SdkConfigure.Request.contentType;
             request.Method = "POST";
-            if (Configure.Request.http_connection_timeout > 0) { 
-                 request.Timeout = Configure.Request.http_connection_timeout;
+            if (SdkConfigure.Request.http_connection_timeout > 0) { 
+                 request.Timeout = SdkConfigure.Request.http_connection_timeout;
             }
-            if (Configure.Request.http_read_timeout>0)
+            if (SdkConfigure.Request.http_read_timeout>0)
             {
-                 request.ReadWriteTimeout = Configure.Request.http_read_timeout;
+                 request.ReadWriteTimeout = SdkConfigure.Request.http_read_timeout;
             }
            
            
