@@ -31,7 +31,8 @@ namespace com.hzins.rpc.client.test
 
             CommonResult<ProductListResp> ret = operation.productList(req);
 
-            System.Console.WriteLine(ret);
+            System.Console.WriteLine(JsonConvert.SerializeObject(ret));
+            System.Console.ReadKey();
         }
     }
 }
