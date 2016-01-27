@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace com.hzins.rpc.client
 {
-    class Md5
+    public class Md5
     {
 
         public static string encrypt(string src)

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace com.hzins.rpc.client.core
 {
-    class ProxyFactory
+   public  class ProxyFactory
     {
       
         public static T create<T>() {

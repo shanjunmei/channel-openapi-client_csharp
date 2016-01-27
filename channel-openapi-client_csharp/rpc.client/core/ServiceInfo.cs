@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace com.hzins.rpc.client.core
 {
-    class ServiceInfo : Attribute
+   public class ServiceInfo : Attribute
     {
         public string value;
 
