@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1AAF358E-916C-4B2C-9403-A915ED637C53}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.hzins.com.channel.openapi.client.csharp</RootNamespace>
+    <AssemblyName>channel-openapi-client_csharp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\..\..\..\Downloads\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="hz.net\com\hzins\channel\api\model\ApplicationData.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\common\CommonResult.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\info\ApplicantInfo.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\info\CalculatePriceDataInfo.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\info\ExtendInfo.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\info\FinancialInfo.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\info\HealthInfo.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\info\IncomeDetailInfo.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\info\InsurantInfo.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\info\InsureBeneficiaryInfo.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\info\OrderDetailInfo.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\info\OrderExtInfo.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\info\OrderInfo.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\info\PolicyDetailInfo.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\info\ProductInfo.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\info\SettlementBillDetailInfo.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\info\SettlementDetailInfo.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\PlanDetail.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\PrePayParam.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\req\AppPrePayReq.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\req\BaseReq.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\req\CpsPayReq.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\req\IncomeDetailReq.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\req\InsureDetailReq.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\req\InsureDownloadReq.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\req\OrderApplyReq.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\req\OrderCancelReq.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\req\OrderDetailReq.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\req\OrderSearchReq.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\req\PrePayReq.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\req\ProductDetailReq.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\req\ProductListReq.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\req\RegisterReq.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\req\SettlementBillDetailReq.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\req\SettlementBillTotalReq.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\req\SettlementDetailReq.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\req\SettlementReq.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\resp\AppPrePayResp.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\resp\BaseResp.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\resp\CpsPayResp.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\resp\IncomeDetailResp.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\resp\InsureDetailResp.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\resp\InsureDownloadResp.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\resp\OrderApplyResp.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\resp\OrderCancelResp.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\resp\PrePayResp.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\resp\ProductDetailResp.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\resp\ProductListResp.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\resp\RegisterResp.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\resp\SearchInsureResp.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\resp\SettlementBillDetailResp.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\resp\SettlementBillTotalResp.cs" />
+    <Compile Include="hz.net\com\hzins\channel\api\model\resp\SettlementDetailResp.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rpc.client\core\Command.cs" />
+    <Compile Include="rpc.client\core\Proxy.cs" />
+    <Compile Include="rpc.client\core\ProxyFactory.cs" />
+    <Compile Include="rpc.client\core\ServiceInfo.cs" />
+    <Compile Include="rpc.client\Md5.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
