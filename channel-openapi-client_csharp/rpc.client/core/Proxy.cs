@@ -18,8 +18,10 @@ namespace com.hzins.rpc.client.core
             MethodInfo method = invocation.Method;
             
             string command = method.Name;
-            Command api=method.GetCustomAttribute<Command>();
-            if (api != null) {
+            Command[] apis = (Command[])method.GetCustomAttributes(typeof(Command), false);
+           
+            if (apis != null) {
+                Command api = apis[0];
                 if (!String.IsNullOrEmpty(api.command)) {
                     command = api.command;
                 }
@@ -28,10 +30,18 @@ namespace com.hzins.rpc.client.core
 
           
             object[] param = invocation.Arguments;
-
-            ServiceInfo serviceInfo = method.GetCustomAttribute<ServiceInfo>();
+            ServiceInfo[] serviceInfos = (ServiceInfo[])method.GetCustomAttributes(typeof(ServiceInfo), false);
+            ServiceInfo serviceInfo = null;
+            if (serviceInfos != null)
+            {
+                serviceInfo = serviceInfos[0];
+            }
             if (serviceInfo == null) {
-               serviceInfo= method.DeclaringType.GetCustomAttribute<ServiceInfo>();
+                serviceInfos = (ServiceInfo[])method.DeclaringType.GetCustomAttributes(typeof(ServiceInfo), false);
+                if (serviceInfos != null) {
+                    serviceInfo = serviceInfos[0];
+                }
+                
             }
             string baseInfo = serviceInfo.value;
            int pc= method.GetParameters().Length;
@@ -55,7 +65,7 @@ namespace com.hzins.rpc.client.core
             request.ContentType = Configure.Request.contentType;
             request.Method = "POST";
             if (Configure.Request.http_connection_timeout > 0) { 
-                 request.ContinueTimeout = Configure.Request.http_connection_timeout;
+                 request.Timeout = Configure.Request.http_connection_timeout;
             }
             if (Configure.Request.http_read_timeout>0)
             {

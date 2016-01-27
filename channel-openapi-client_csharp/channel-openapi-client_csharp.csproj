@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Castle.Core">
-      <HintPath>..\..\..\..\..\Downloads\Castle.Core.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\Visual Studio 2013\Projects\Castle.Core\Core-3.3.3\src\Castle.Core\bin\NET40-Release\Castle.Core.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -97,6 +97,7 @@
     <Compile Include="hz.net\com\hzins\channel\api\model\resp\SettlementBillTotalResp.cs" />
     <Compile Include="hz.net\com\hzins\channel\api\model\resp\SettlementDetailResp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rpc.client\Configure.cs" />
     <Compile Include="rpc.client\core\Command.cs" />
     <Compile Include="rpc.client\core\Proxy.cs" />
     <Compile Include="rpc.client\core\ProxyFactory.cs" />
