@@ -20,7 +20,7 @@ namespace com.hzins.rpc.client.core
             string command = method.Name;
             Command[] apis = (Command[])method.GetCustomAttributes(typeof(Command), false);
            
-            if (apis != null) {
+            if (apis != null&&apis.Length>0) {
                 Command api = apis[0];
                 if (!String.IsNullOrEmpty(api.command)) {
                     command = api.command;
@@ -32,13 +32,14 @@ namespace com.hzins.rpc.client.core
             object[] param = invocation.Arguments;
             ServiceInfo[] serviceInfos = (ServiceInfo[])method.GetCustomAttributes(typeof(ServiceInfo), false);
             ServiceInfo serviceInfo = null;
-            if (serviceInfos != null)
+            if (serviceInfos != null&&serviceInfos.Length>0)
             {
                 serviceInfo = serviceInfos[0];
             }
             if (serviceInfo == null) {
                 serviceInfos = (ServiceInfo[])method.DeclaringType.GetCustomAttributes(typeof(ServiceInfo), false);
-                if (serviceInfos != null) {
+                if (serviceInfos != null && serviceInfos.Length > 0)
+                {
                     serviceInfo = serviceInfos[0];
                 }
                 
