@@ -83,7 +83,7 @@ namespace com.hzins.rpc.client.core
 
             WebResponse response= request.GetResponse();
 
-            StreamReader reader=new StreamReader(response.GetResponseStream());
+            StreamReader reader = new StreamReader(response.GetResponseStream(), System.Text.UTF8Encoding.UTF8);
             return reader.ReadToEnd();
                      
         }
