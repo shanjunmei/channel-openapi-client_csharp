@@ -102,7 +102,6 @@
     <Compile Include="rpc.client\core\Command.cs" />
     <Compile Include="rpc.client\core\Proxy.cs" />
     <Compile Include="rpc.client\core\ProxyFactory.cs" />
-    <Compile Include="rpc.client\core\ServiceInfo.cs" />
     <Compile Include="rpc.client\utils\Md5.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

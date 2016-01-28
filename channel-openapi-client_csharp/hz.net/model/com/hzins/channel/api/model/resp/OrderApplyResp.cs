@@ -12,7 +12,6 @@
 using System.Collections.Generic;
 
 using com.hzins.channel.api.model.info;
-using com.hzins.channel.api.model.info;
 
 namespace com.hzins.channel.api.model.resp
 {
@@ -39,7 +38,7 @@ namespace com.hzins.channel.api.model.resp
         public IList<OrderInfo> orderInfos;
 
         //保单与被保人关联信息
-        IList<OrderExtInfo> orderExts;
+        public IList<OrderExtInfo> orderExts;
 
 
     }
