@@ -12,9 +12,9 @@ namespace com.hzins.rpc.client.core
    public  class ProxyFactory
     {
       
-        public static T create<T>() {
+        public static T create<T>(string serviceBase) {
             ProxyGenerator g =new ProxyGenerator();
-            IInterceptor interceptor = new Proxy();
+            IInterceptor interceptor = new Proxy(serviceBase);
             T o=(T) g.CreateInterfaceProxyWithoutTarget(typeof(T),interceptor);
             return o;
         }

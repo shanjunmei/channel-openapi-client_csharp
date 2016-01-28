@@ -11,9 +11,9 @@ using com.hzins.channel.api.model.req;
 using com.hzins.channel.api.model.info;
 using com.hzins.rpc.client.core;
 
-namespace com.hzins.rpc.client
+namespace com.hzins.rpc.client.openapi.inter
 {
-    [ServiceInfo(Configure.Channel.baseUrl)]
+  
     public interface OpenApiRemoteOperation
     {
 
@@ -34,6 +34,7 @@ namespace com.hzins.rpc.client
          * @date 2016年1月7日 上午8:52:49
          * @version
          */
+        [Command("productList")]
         CommonResult<ProductListResp> productList(ProductListReq req);
 
         /**

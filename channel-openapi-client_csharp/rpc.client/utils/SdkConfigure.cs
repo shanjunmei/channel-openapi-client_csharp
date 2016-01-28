@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace com.hzins.rpc.client
+namespace com.hzins.rpc.client.utils
 {
     public class SdkConfigure
     {

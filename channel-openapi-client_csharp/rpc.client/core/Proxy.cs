@@ -1,4 +1,5 @@
 ﻿using Castle.DynamicProxy;
+using com.hzins.rpc.client.utils;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -13,79 +14,78 @@ namespace com.hzins.rpc.client.core
 {
     class Proxy : IInterceptor
     {
+
+        private string serviceBase;
+
+        public Proxy(string serviceBase)
+        {
+            this.serviceBase = serviceBase;
+        }
+
         public void Intercept(IInvocation invocation)
         {
             MethodInfo method = invocation.Method;
-            
+
             string command = method.Name;
             Command[] apis = (Command[])method.GetCustomAttributes(typeof(Command), false);
-           
-            if (apis != null&&apis.Length>0) {
+
+            if (apis != null && apis.Length > 0)
+            {
                 Command api = apis[0];
-                if (!String.IsNullOrEmpty(api.command)) {
+                if (!String.IsNullOrEmpty(api.command))
+                {
                     command = api.command;
                 }
-                
+
             }
 
-          
+
             object[] param = invocation.Arguments;
-            ServiceInfo[] serviceInfos = (ServiceInfo[])method.GetCustomAttributes(typeof(ServiceInfo), false);
-            ServiceInfo serviceInfo = null;
-            if (serviceInfos != null&&serviceInfos.Length>0)
+
+            string baseInfo = serviceBase;
+            int pc = method.GetParameters().Length;
+            object actualParam = param;
+            if (pc == 1)
             {
-                serviceInfo = serviceInfos[0];
+                actualParam = param[0];
             }
-            if (serviceInfo == null) {
-                serviceInfos = (ServiceInfo[])method.DeclaringType.GetCustomAttributes(typeof(ServiceInfo), false);
-                if (serviceInfos != null && serviceInfos.Length > 0)
-                {
-                    serviceInfo = serviceInfos[0];
-                }
-                
-            }
-            string baseInfo = serviceInfo.value;
-           int pc= method.GetParameters().Length;
-           object actualParam = param;
-           if (pc == 1)
-           {
-               actualParam=param[0];
-           }
 
-           string response = remoteInvoke(baseInfo + command, actualParam);
+            string response = remoteInvoke(baseInfo + command, actualParam);
 
-           
-            Type returnType=method.ReturnType;
-            
+
+            Type returnType = method.ReturnType;
+
             invocation.ReturnValue = convert2entity(response, returnType);
 
         }
 
-        public string remoteInvoke(string api, object obj) {
+        public string remoteInvoke(string api, object obj)
+        {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(api);
             request.ContentType = SdkConfigure.Request.contentType;
             request.Method = "POST";
-            if (SdkConfigure.Request.http_connection_timeout > 0) { 
-                 request.Timeout = SdkConfigure.Request.http_connection_timeout;
-            }
-            if (SdkConfigure.Request.http_read_timeout>0)
+            if (SdkConfigure.Request.http_connection_timeout > 0)
             {
-                 request.ReadWriteTimeout = SdkConfigure.Request.http_read_timeout;
+                request.Timeout = SdkConfigure.Request.http_connection_timeout;
             }
-           
-           
+            if (SdkConfigure.Request.http_read_timeout > 0)
+            {
+                request.ReadWriteTimeout = SdkConfigure.Request.http_read_timeout;
+            }
 
-            StreamWriter writer = new StreamWriter(request.GetRequestStream(),System.Text.UTF8Encoding.UTF8);
-            string param=convert2json(obj);
-            
+
+
+            StreamWriter writer = new StreamWriter(request.GetRequestStream(), System.Text.UTF8Encoding.UTF8);
+            string param = convert2json(obj);
+
             writer.Write(param);
             writer.Flush();
 
-            WebResponse response= request.GetResponse();
+            WebResponse response = request.GetResponse();
 
             StreamReader reader = new StreamReader(response.GetResponseStream(), System.Text.UTF8Encoding.UTF8);
             return reader.ReadToEnd();
-                     
+
         }
 
         public string convert2json(object obj)
@@ -93,8 +93,9 @@ namespace com.hzins.rpc.client.core
             return JsonConvert.SerializeObject(obj);
         }
 
-       
-        public object convert2entity(string json,Type type) {
+
+        public object convert2entity(string json, Type type)
+        {
             return JsonConvert.DeserializeObject(json, type);
         }
     }

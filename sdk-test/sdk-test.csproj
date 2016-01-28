@@ -58,7 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configure.cs" />
-    <Compile Include="OpenApiRemoteOperation.cs" />
     <Compile Include="OpenApiRemoteOperationTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

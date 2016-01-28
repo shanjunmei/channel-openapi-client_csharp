@@ -8,12 +8,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using com.hzins.rpc.client.utils;
+using com.hzins.rpc.client.openapi.inter;
 
 namespace com.hzins.rpc.client.test
 {
     class OpenApiRemoteOperationTest
     {
-        static OpenApiRemoteOperation operation = ProxyFactory.create<OpenApiRemoteOperation>();
+        static OpenApiRemoteOperation operation = ProxyFactory.create<OpenApiRemoteOperation>(Configure.Channel.baseUrl);
 
         public static void  testProductList()
         {
