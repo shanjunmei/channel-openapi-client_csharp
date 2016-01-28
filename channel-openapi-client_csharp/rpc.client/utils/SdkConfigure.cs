@@ -13,15 +13,15 @@ namespace com.hzins.rpc.client.utils
         public static class Request
         {
 
-            public readonly static int http_connection_timeout = 0;// ms为单位
+            public  static int http_connection_timeout = 0;// ms为单位
             // 默认为0，系统默认超时时间，根据操作系统而定
 
-            public readonly static int http_read_timeout = 0;// ms为单位
+            public  static int http_read_timeout = 0;// ms为单位
             // 默认为0，系统默认超时时间，根据操作系统而定
 
-            public readonly static string userAgent = "Channel OpenApi Sdk(c#)";
+            public  static string userAgent = "Channel OpenApi Sdk(c#)";
 
-            public readonly static string contentType = "application/json;charset=UTF-8";
+            public  static string contentType = "application/json;charset=UTF-8";
         }
 
 
