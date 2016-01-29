@@ -13,300 +13,130 @@ using com.hzins.rpc.client.core;
 
 namespace com.hzins.rpc.client.openapi.inter
 {
-  
+
     public interface OpenApiRemoteOperation
     {
 
 
 
-        /**
-         * 
-         * <p>
-         * 
-         * 产品列表
-         *
-         * </p>
-         * 
-         * @param req
-         * @return
-         * 
-         * @author hz15101769
-         * @date 2016年1月7日 上午8:52:49
-         * @version
-         */
+        /// <summary>
+        /// 产品列表
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
         [Command("productList")]
         CommonResult<ProductListResp> productList(ProductListReq req);
 
-        /**
-         * 
-         * <p>
-         * 
-         * 产品详情
-         *
-         * </p>
-         * 
-         * @param req
-         * @return
-         * 
-         * @author hz15101769
-         * @date 2016年1月7日 上午8:56:35
-         * @version
-         */
+        /// <summary>
+        /// 产品详情
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
         CommonResult<ProductDetailResp> productDetail(ProductDetailReq req);
 
-        /**
-         * 
-         * <p>
-         * 
-         * 投保
-         *
-         * </p>
-         * 
-         * @param req
-         * @return
-         * 
-         * @author hz15101769
-         * @date 2016年1月6日 下午4:55:04
-         * @version
-         */
-         CommonResult<OrderApplyResp> orderApply(OrderApplyReq req);
+        /// <summary>
+        /// 投保
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
+        CommonResult<OrderApplyResp> orderApply(OrderApplyReq req);
 
-        /**
-         * 
-         * <p>
-         * 
-         * 退保
-         *
-         * </p>
-         * 
-         * @param req
-         * @return
-         * 
-         * @author hz15101769
-         * @date 2016年1月7日 上午9:05:18
-         * @version
-         */
+        /// <summary>
+        /// 退保
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
         CommonResult<OrderCancelResp> orderCancel(OrderCancelReq req);
 
-        /**
-         * 
-         * <p>
-         * 
-         * 保单下载
-         *
-         * </p>
-         * 
-         * @param req
-         * @return
-         * 
-         * @author hz15101769
-         * @date 2016年1月7日 上午9:05:26
-         * @version
-         */
+        /// <summary>
+        /// 保单下载
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
         CommonResult<InsureDownloadResp> download(InsureDownloadReq req);
 
-        /**
-         * 
-         * <p>
-         * 
-         * CPS支付
-         *
-         * </p>
-         * 
-         * @param req
-         * @return
-         * 
-         * @author hz15101769
-         * @date 2016年1月7日 上午9:05:45
-         * @version
-         */
+        /// <summary>
+        /// CPS支付
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
         CommonResult<CpsPayResp> cpsPay(CpsPayReq req);
 
-        /**
-         * 
-         * <p>
-         * 
-         * 8.API支付
-         *
-         * </p>
-         * 
-         * @param req
-         * @return
-         * 
-         * @author hz15101769
-         * @date 2016年1月7日 上午9:05:55
-         * @version
-         */
+        /// <summary>
+        /// API支付
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
         CommonResult<PrePayResp> prePay(PrePayReq req);
 
-        /**
-         * 
-         * <p>
-         * 
-         * APP支付
-         *
-         * </p>
-         * 
-         * @param req
-         * @return
-         * 
-         * @author hz15101769
-         * @date 2016年1月7日 上午9:06:14
-         * @version
-         */
+        /// <summary>
+        /// APP支付
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
         CommonResult<AppPrePayResp> appPrePay(AppPrePayReq req);
 
-        /**
-         * 
-         * <p>
-         * 
-         * 渠道注册
-         *
-         * </p>
-         * 
-         * @param req
-         * @return
-         * 
-         * @author hz15101769
-         * @date 2016年1月7日 上午9:06:26
-         * @version
-         */
+        /// <summary>
+        /// 渠道注册
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
         CommonResult<RegisterResp> register(RegisterReq req);
 
-        /**
-         * 
-         * <p>
-         * 
-         * 投保单查询
-         *
-         * </p>
-         * 
-         * @param req
-         * @return
-         * 
-         * @author hz15101769
-         * @date 2016年1月7日 上午9:06:40
-         * @version
-         */
+        /// <summary>
+        /// 投保单查询
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
         CommonResult<SearchInsureResp> orderDetail(OrderDetailReq req);
 
-        /**
-         * 
-         * <p>
-         * 
-         * 批量查询保单（分页）
-         *
-         * </p>
-         * 
-         * @param req
-         * @return
-         * 
-         * @author hz15101769
-         * @date 2016年1月7日 上午9:07:22
-         * @version
-         */
+        /// <summary>
+        /// 批量查询保单（分页）
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
         CommonResult<SearchInsureResp> orderSearch(OrderSearchReq req);
 
-        /**
-         * 
-         * <p>
-         * 
-         * 投保单详情
-         *
-         * </p>
-         * 
-         * @param req
-         * @return
-         * 
-         * @author hz15101769
-         * @date 2016年1月7日 上午9:07:29
-         * @version
-         */
+        /// <summary>
+        /// 投保单详情
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
         CommonResult<InsureDetailResp> insureDetail(InsureDetailReq req);
 
-        /**
-         * 
-         * <p>
-         * 
-         * 服务费结算
-         *
-         * </p>
-         * 
-         * @param req
-         * @return
-         * 
-         * @author hz15101769
-         * @date 2016年1月7日 上午9:07:45
-         * @version
-         */
+        /// <summary>
+        /// 服务费结算
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
         CommonResult<FinancialInfo> submitSettlement(SettlementReq req);
 
-        /**
-         * 
-         * <p>
-         * 
-         * 服务费明细
-         *
-         * </p>
-         * 
-         * @param req
-         * @return
-         * 
-         * @author hz15101769
-         * @date 2016年1月7日 上午9:08:12
-         * @version
-         */
+        /// <summary>
+        /// 服务费明细
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
         CommonResult<SettlementDetailResp> settlementDetail(SettlementDetailReq req);
 
-        /**
-         * 
-         * <p>
-         * 
-         * 结算申请明细
-         *
-         * </p>
-         * 
-         * @param req
-         * @return
-         * 
-         * @author hz15101769
-         * @date 2016年1月7日 上午9:08:30
-         * @version
-         */
+        /// <summary>
+        /// 结算申请明细
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
         CommonResult<SettlementBillDetailResp> settlementBillDetail(SettlementBillDetailReq req);
 
-        /**
-         * 
-         * <p>
-         * 
-         * 结算申请汇总
-         *
-         * </p>
-         * 
-         * @param req
-         * @return
-         * 
-         * @author hz15101769
-         * @date 2016年1月7日 上午9:08:44
-         * @version
-         */
+        /// <summary>
+        /// 结算申请汇总
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
         CommonResult<SettlementBillTotalResp> settlementBillTotal(SettlementBillTotalReq req);
 
-        /**
-         * 
-         * <p>
-         * 
-         * 服务费按月汇总
-         *
-         * </p>
-         * 
-         * @param req
-         * @return
-         * 
-         * @author hz15101769
-         * @date 2016年1月7日 上午9:09:09
-         * @version
-         */
+        /// <summary>
+        /// 服务费按月汇总
+        /// </summary>
+        /// <param name="req"></param>
+        /// <returns></returns>
         CommonResult<IncomeDetailResp> incomeDetail(IncomeDetailReq req);
 
     }
