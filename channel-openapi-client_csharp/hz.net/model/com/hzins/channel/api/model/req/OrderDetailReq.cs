@@ -7,7 +7,7 @@ namespace com.hzins.channel.api.model.req
 	/// </p>
 	/// </summary>
 	/// <author>hz15031081</author>
-	/// <date>2015-5-5 下午7:57:02</date>
+	/// <date></date>
 	/// <version/>
 	public class OrderDetailReq
 	{
@@ -29,10 +29,7 @@ namespace com.hzins.channel.api.model.req
 
 		public int pageSize;
 
-		// 投保人证件号
-		// 投保人邮�?
-		// 当前�?
-		// 每页显示数据
+		
 	
 	}
 }

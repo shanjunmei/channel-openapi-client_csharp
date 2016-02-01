@@ -4,11 +4,11 @@ namespace com.hzins.channel.api.model.resp
 {
 	/// <summary>
 	/// <p>
-	/// 保单下载
+	/// 
 	/// </p>
 	/// </summary>
 	/// <author>hz15051252</author>
-	/// <date>2015�?5�?11�? 下午3:38:53</date>
+	/// <date></date>
 	/// <version/>
 	public class InsureDownloadResp
 	{
@@ -22,11 +22,7 @@ namespace com.hzins.channel.api.model.resp
 
 		public string transNo;
 
-		// 文件�?
-		// 文件大小
-		// 类型
-		// 文件�?
-		//流水�?
+		
 		
 	}
 }

@@ -7,7 +7,7 @@ namespace com.hzins.channel.api.model.req
 	/// </p>
 	/// </summary>
 	/// <author>hz15031081</author>
-	/// <date>2015-7-24 下午7:57:02</date>
+	/// <date></date>
 	/// <version/>
 	public class OrderSearchReq
 	{
@@ -35,18 +35,7 @@ namespace com.hzins.channel.api.model.req
 
 		public System.Collections.Generic.IList<string> insureNums;
 
-		// 代理商编�?
-		// 交易流水号，每一单请求交易不能相�?
-		// 数字签名
-		// 当前�?
-		// 每页显示数据
-		//投保�?始时�?
-		//投保结束时间
-		//投保人姓�?
-		//被保险人姓名
-		//投保人证件号�?
-		//userId
-		// 多个投保单号
+		
 		
 	}
 }

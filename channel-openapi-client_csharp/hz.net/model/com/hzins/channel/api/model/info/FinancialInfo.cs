@@ -4,11 +4,11 @@ namespace com.hzins.channel.api.model.info
 {
 	/// <summary>
 	/// <p>
-	/// api服务费提现财务信息实�?
+	/// 
 	/// </p>
 	/// </summary>
 	/// <author>hz15041177</author>
-	/// <date>2015-6-3 下午5:24:47</date>
+	/// <date></date>
 	/// <version></version>
 	public class FinancialInfo
 	{
