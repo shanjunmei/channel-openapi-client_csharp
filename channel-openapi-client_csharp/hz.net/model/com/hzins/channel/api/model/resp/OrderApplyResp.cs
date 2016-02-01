@@ -15,14 +15,9 @@ using com.hzins.channel.api.model.info;
 
 namespace com.hzins.channel.api.model.resp
 {
-    /**
-     * <p>
-     * 
-     * </p>
-     * @author	hz15031081 
-     * @date	2015-4-13 下午7:56:26
-     * @version      
-     */
+    /// <summary>
+    /// 投保返回信息
+    /// </summary>
     public class OrderApplyResp
     {
         /// <summary>
@@ -30,7 +25,7 @@ namespace com.hzins.channel.api.model.resp
         /// </summary>
         public string transNo;
 
-     
+
         /// <summary>
         /// 代理商信息
         /// </summary>
@@ -39,9 +34,9 @@ namespace com.hzins.channel.api.model.resp
         /// <summary>
         /// 惠择投保单号
         /// </summary>
-         public string insureNum;
+        public string insureNum;
 
-        
+
 
         /// <summary>
         /// 保单信息

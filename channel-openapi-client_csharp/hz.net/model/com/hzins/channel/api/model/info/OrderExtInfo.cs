@@ -13,14 +13,10 @@ using System.Collections.Generic;
 namespace com.hzins.channel.api.model.info
 {
 
-    /**
-     * <p>
-     * 
-     * </p>
-     * @author	hz15031081 
-     * @date	2015-4-13 下午4:36:22
-     * @version      
-     */
+   
+    /// <summary>
+    /// 订单扩展信息
+    /// </summary>
     public class OrderExtInfo
     {
 
