@@ -25,19 +25,32 @@ namespace com.hzins.channel.api.model.resp
      */
     public class OrderApplyResp
     {
-
+        /// <summary>
+        /// 交易流水号
+        /// </summary>
         public string transNo;
 
-        // 代理商信息
+     
+        /// <summary>
+        /// 代理商信息
+        /// </summary>
         public int partnerId;
 
-        // 惠择投保单号
-        public string insureNum;
+        /// <summary>
+        /// 惠择投保单号
+        /// </summary>
+         public string insureNum;
 
-        // 保单信息
+        
+
+        /// <summary>
+        /// 保单信息
+        /// </summary>
         public IList<OrderInfo> orderInfos;
 
-        //保单与被保人关联信息
+        /// <summary>
+        /// 保单与被保人关联信息
+        /// </summary>
         public IList<OrderExtInfo> orderExts;
 
 

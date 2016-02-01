@@ -24,16 +24,24 @@ namespace com.hzins.channel.api.model.info
     public class OrderExtInfo
     {
 
-        // 惠择投保单号
+        /// <summary>
+        /// 惠择投保单号
+        /// </summary>
         public string insureNum;
 
-        // 被保人id集合
+        /// <summary>
+        /// 被保人id集合
+        /// </summary>
         public IList<string> insurantIds;
 
-        // 被保人数量
+        /// <summary>
+        /// 被保人数量
+        /// </summary>
         public int insurantCount;
 
-        //本单总价
+        /// <summary>
+        /// 本单总价
+        /// </summary>
         public double priceTotal;
 
         public Dictionary<string, string> insurantMap;

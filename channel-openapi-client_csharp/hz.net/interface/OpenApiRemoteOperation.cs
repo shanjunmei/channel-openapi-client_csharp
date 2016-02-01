@@ -13,7 +13,9 @@ using com.hzins.rpc.client.core;
 
 namespace com.hzins.rpc.client.openapi.inter
 {
-
+    /// <summary>
+    /// 服务端接口
+    /// </summary>
     public interface OpenApiRemoteOperation
     {
 
