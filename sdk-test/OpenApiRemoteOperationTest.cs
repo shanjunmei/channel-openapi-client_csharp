@@ -19,12 +19,13 @@ namespace com.hzins.rpc.client.test
 
         public static void  testProductList()
         {
-            
+        
+         
             ProductListReq req = new ProductListReq();
-            req.partnerId = Configure.Channel.partnerId;
+            req.partnerId = (int)SdkConfigure.Channel.partnerId;
             req.transNo = "testc#sdk";
             
-            string sign = Md5.encrypt(Configure.Channel.channelKey + Configure.Channel.partnerId.ToString() + req.transNo);
+            string sign = Md5.encrypt(SdkConfigure.Channel.channelKey + SdkConfigure.Channel.partnerId.ToString() + req.transNo);
 
             req.sign = sign;
 
