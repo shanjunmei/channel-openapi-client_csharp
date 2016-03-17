@@ -1,18 +1,11 @@
 ﻿using Castle.DynamicProxy;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace com.hzins.rpc.client.core
 {
     /// <summary>
     /// 动态代理工厂
     /// </summary>
-   public  class ProxyFactory
+    public  class ProxyFactory
     {
       
        /// <summary>
