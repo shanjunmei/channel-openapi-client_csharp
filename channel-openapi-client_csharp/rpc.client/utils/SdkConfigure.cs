@@ -33,7 +33,7 @@ namespace com.hzins.rpc.client.utils
             /// <summary>
             /// user-agent
             /// </summary>
-            public static string userAgent = "Channel OpenApi Sdk(c#)";
+            public static string userAgent = "Channel OpenApi Sdk(c#)v1.1";
             /// <summary>
             /// contentType
             /// </summary>
