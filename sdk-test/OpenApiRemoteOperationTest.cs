@@ -18,8 +18,8 @@ namespace com.hzins.rpc.client.test
         static OpenApiRemoteOperation operation = ProxyFactory.create<OpenApiRemoteOperation>(SdkConfigure.Channel.baseUrl);
 
         private static void init() {
-            SdkConfigure.Channel.partnerId = 11;
-            SdkConfigure.Channel.channelKey = "33";
+            SdkConfigure.Channel.partnerId = 22803;
+            SdkConfigure.Channel.channelKey = "22803^*#%";
         }
 
         public static void  testProductList()
