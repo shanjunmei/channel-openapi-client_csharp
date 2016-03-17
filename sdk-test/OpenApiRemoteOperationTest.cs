@@ -15,7 +15,7 @@ namespace com.hzins.rpc.client.test
 {
     class OpenApiRemoteOperationTest
     {
-        static OpenApiRemoteOperation operation = ProxyFactory.create<OpenApiRemoteOperation>(Configure.Channel.baseUrl);
+        static OpenApiRemoteOperation operation = ProxyFactory.create<OpenApiRemoteOperation>(SdkConfigure.Channel.baseUrl);
 
         public static void  testProductList()
         {
