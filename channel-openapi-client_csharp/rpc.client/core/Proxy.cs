@@ -61,6 +61,9 @@ namespace com.hzins.rpc.client.core
 
         public string remoteInvoke(string api, object obj)
         {
+            string param = convert2json(obj);
+            api = sign(api, param);
+
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(api);
             request.ContentType = SdkConfigure.Request.contentType;
             request.Method = "POST";
@@ -76,7 +79,7 @@ namespace com.hzins.rpc.client.core
 
 
             StreamWriter writer = new StreamWriter(request.GetRequestStream(), System.Text.UTF8Encoding.UTF8);
-            string param = convert2json(obj);
+
 
             writer.Write(param);
             writer.Flush();
@@ -86,6 +89,18 @@ namespace com.hzins.rpc.client.core
             StreamReader reader = new StreamReader(response.GetResponseStream(), System.Text.UTF8Encoding.UTF8);
             return reader.ReadToEnd();
 
+        }
+        /// <summary>
+        /// 签名
+        /// </summary>
+        /// <param name="api"></param>
+        /// <param name="param"></param>
+        /// <returns></returns>
+        private static string sign(string api, string param)
+        {
+            string sign = Md5.encrypt(SdkConfigure.Channel.channelKey + param);
+            api = api + "?sign=" + sign;
+            return api;
         }
 
         public string convert2json(object obj)

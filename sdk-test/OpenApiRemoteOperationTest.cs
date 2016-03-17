@@ -30,9 +30,9 @@ namespace com.hzins.rpc.client.test
             req.partnerId = (int)SdkConfigure.Channel.partnerId;
             req.transNo = "testc#sdk";
             
-            string sign = Md5.encrypt(SdkConfigure.Channel.channelKey + SdkConfigure.Channel.partnerId.ToString() + req.transNo);
+            //string sign = Md5.encrypt(SdkConfigure.Channel.channelKey + SdkConfigure.Channel.partnerId.ToString() + req.transNo);
 
-            req.sign = sign;
+            //req.sign = sign;
 
             string xx = JsonConvert.SerializeObject(req);
             System.Console.WriteLine(xx);
