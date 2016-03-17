@@ -54,7 +54,7 @@ namespace com.hzins.rpc.client.utils
             /// <summary>
             /// 渠道id
             /// </summary>
-            public static int? partnerId = null;//241649
+            public static int? partnerId=null; //241649
             /// <summary>
             /// 渠道密钥
             /// </summary>

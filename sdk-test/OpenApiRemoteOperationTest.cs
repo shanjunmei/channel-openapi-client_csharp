@@ -17,10 +17,15 @@ namespace com.hzins.rpc.client.test
     {
         static OpenApiRemoteOperation operation = ProxyFactory.create<OpenApiRemoteOperation>(SdkConfigure.Channel.baseUrl);
 
+        private static void init() {
+            SdkConfigure.Channel.partnerId = 11;
+            SdkConfigure.Channel.channelKey = "33";
+        }
+
         public static void  testProductList()
         {
-        
-         
+            init();
+
             ProductListReq req = new ProductListReq();
             req.partnerId = (int)SdkConfigure.Channel.partnerId;
             req.transNo = "testc#sdk";
